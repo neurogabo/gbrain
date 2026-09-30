@@ -2,7 +2,7 @@
 
 Repositorio: [neurogabo/gbrain](https://github.com/neurogabo/gbrain). Público; fork. Rama predeterminada: `master`.
 
-Revisión inicial del **2026-09-28 06:24:01 America/Mexico_City (UTC−06:00)**. Cobertura **parcial**. No existe un informe anterior ni un intervalo previo verificable; este documento establece el panorama inicial. La fecha de revisión y el commit automático del informe son distintos de la fecha del último cambio sustantivo.
+**Revisión parcial del 2026-09-30 06:04:57, America/Mexico_City**. Se conserva el último panorama documentado y sus pendientes. Se volvieron a comprobar las referencias y eventos de GitHub; la conciliación inicial indicada en los límites sigue pendiente. No se adelanta la referencia de última revisión completa.
 
 ## Estado actual y punto para retomar
 
@@ -12,13 +12,17 @@ Fork de GBrain, una capa de conocimiento y memoria para agentes con ingestión, 
 
 ## Cambios integrados y trabajo en otras ramas
 
+En las referencias comparadas se identificó únicamente el commit de publicación del informe anterior. Esa comparación no sustituye la conciliación documental pendiente; se conserva el resumen anterior.
+
 **En `master`:** El corte reciente incorpora una tabla canónica de precios/modelos y soporte del modelo señalado en el commit, además de ajustes al pool de sesiones para locks y a la prioridad de trabajadores. Son datos versionados de esa fecha, no precios actuales comprobados.
 
 Solo se encontró una rama remota en el repositorio.
 
-**Último cambio sustantivo de Git verificado:** 2026-06-04 00:00:11 America/Mexico_City (UTC−06:00); [9a0bae8d62](https://github.com/neurogabo/gbrain/commit/9a0bae8d62cdd1e0dd6655e24e082fe6c69c5dac), «v0.42.25.0 fix(pricing): unify chat-model pricing into one canonical source; add Opus 4.8 (#1819) (#1827)»; punta de `master`. Este criterio usa fecha de commit y cambios reales de archivos, no la fecha pushed_at del repositorio.
+**Último cambio sustantivo de Git verificado:** 2026-06-04 00:00:11 America/Mexico_City (UTC−06:00); [9a0bae8d62](https://github.com/neurogabo/gbrain/commit/9a0bae8d62cdd1e0dd6655e24e082fe6c69c5dac), «v0.42.25.0 fix(pricing): unify chat-model pricing into one canonical source; add Opus 4.8 (#1819) (#1827)»; cambio sustantivo documentado en `master`. Este criterio usa fecha de commit y cambios reales de archivos, no la fecha pushed_at del repositorio.
 
 ## Pendientes y bloqueos documentados
+
+La lectura ampliada de TODOS.md identifica 281 casillas abiertas, incluyendo seguimientos históricos. Entre los P0 registrados están el gate de evaluación para CI, captura de evaluación en modo contribuidor y sonda nocturna de calidad. Su vigencia y cierre deben conciliarse con el historial; no se asignan aquí responsables ni fechas nuevos. Esta ampliación describe contenido ya existente, no nuevos commits.
 
 - TODOS.md contiene backlog explícito y extenso. Entre los puntos abiertos: persistencia y reconciliación del historial tool-result al reanudar el gateway (P1), propiedad del singleton bajo reconexiones concurrentes (P2) y drenado de colas antes de desconectar (P3).
 - También registra persistir best.md en SkillOpt sin mutación, dimensionar el pool directo para concurrencia, verificar firma/checksum antes de autoactualización y drenar solicitudes durante la actualización. Revisar prioridad y dependencias en la entrada original; no asumir que un arreglo cercano resuelve estos seguimientos.
@@ -33,7 +37,7 @@ No se encontraron ejecuciones de GitHub Actions en la respuesta consultada. No s
 
 ## Evidencia y alcance
 
-Se comprobaron 1 ramas remotas, el árbol de la rama predeterminada, los 8 commits más recientes de esa rama y 5 detalles de commit con sus archivos/diffs disponibles. Se compararon las ramas alternativas y se consultaron 44 fuentes de texto para propósito, estado y pendientes. La lectura inicial sintetiza el estado vigente; no es una auditoría de seguridad línea por línea ni una reproducción de todos los resultados históricos.
+Se enumeraron de nuevo 1 ramas remotas y se contrastaron sus puntas con las referencias observadas en el informe parcial anterior. Se leyeron updates.md antes de la revisión, las instrucciones aplicables y 72 fuentes de texto pertinentes. Se inspeccionaron el diff real de 1 commit del intervalo: 1 modifica exclusivamente updates.md. Se paginaron PR, issues y releases, y se comprobaron las ejecuciones recientes de Actions y el intervalo desde el corte anterior. Se conservaron los datos de fuentes históricas cuyo contenido permanece anclado por su SHA. No se ejecutaron pruebas, aplicaciones ni despliegues.
 
 **Límite pendiente de cobertura:** La revisión inicial identifica estado, diffs recientes y backlog, pero no completa la conciliación de todas las referencias del amplio índice documental y del historial de cambios heredado. Se conserva como parcial y sin referencia de revisión completa previa.
 
@@ -47,11 +51,11 @@ Las afirmaciones de validación, despliegue o actividad externa conservan el alc
 <details>
 <summary>Referencias de todas las ramas al revisar</summary>
 
-| Rama | Commit auditado | Relación con la rama predeterminada |
-| --- | --- | --- |
-| `master` | [9a0bae8d62](https://github.com/neurogabo/gbrain/tree/9a0bae8d62cdd1e0dd6655e24e082fe6c69c5dac) | Predeterminada |
+| Rama | Commit auditado |
+| --- | --- |
+| `master` (predeterminada) | [17a120b318](https://github.com/neurogabo/gbrain/tree/17a120b31883dc49ffed8923ca082a9ae8ed2df5) |
 
-Los contadores describen el grafo Git; un squash puede dejar commits por delante cuyo contenido ya se integró.
+El commit anterior del informe se incluye como referencia observada, pero no cambia la fecha del último cambio sustantivo. Los resúmenes de ramas conservan su distinción entre trabajo integrado y pendiente.
 
 </details>
 
@@ -60,17 +64,17 @@ Los contadores describen el grafo Git; un squash puede dejar commits por delante
   "schema": "neurogabo-updates/v1",
   "owner": "neurogabo",
   "repo": "gbrain",
-  "reviewed_at": "2026-09-28T12:24:01.246Z",
+  "reviewed_at": "2026-09-30T12:04:57.009Z",
   "timezone": "America/Mexico_City",
   "coverage": "parcial",
-  "initial": true,
+  "initial": false,
   "last_complete_review_at": null,
   "last_complete_refs": null,
   "observed_refs": {
-    "master": "9a0bae8d62cdd1e0dd6655e24e082fe6c69c5dac"
+    "master": "17a120b31883dc49ffed8923ca082a9ae8ed2df5"
   },
   "default_branch": "master",
-  "audited_default_sha": "9a0bae8d62cdd1e0dd6655e24e082fe6c69c5dac",
+  "audited_default_sha": "17a120b31883dc49ffed8923ca082a9ae8ed2df5",
   "last_substantive_commit": "9a0bae8d62cdd1e0dd6655e24e082fe6c69c5dac",
   "last_substantive_commit_at": "2026-06-04T06:00:11Z",
   "events": {
@@ -79,6 +83,10 @@ Los contadores describen el grafo Git; un squash puede dejar commits por delante
     "releases": [],
     "workflow_runs": []
   },
-  "ignore_report_only_commits": true
+  "ignore_report_only_commits": true,
+  "interval_from": null,
+  "report_only_commits_excluded": [
+    "17a120b31883dc49ffed8923ca082a9ae8ed2df5"
+  ]
 }
 -->
