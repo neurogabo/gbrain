@@ -2,30 +2,35 @@
 
 Repositorio: [neurogabo/gbrain](https://github.com/neurogabo/gbrain). Público; fork. Rama predeterminada: `master`.
 
-**Revisión parcial del 2026-10-01 06:02:33, America/Mexico_City**. Se conserva el último panorama documentado y sus pendientes. Se volvieron a comprobar las referencias y eventos de GitHub; la conciliación inicial indicada en los límites sigue pendiente. No se adelanta la referencia de última revisión completa.
+**Revisión inicial del 2026-10-02 06:12:49, America/Mexico_City**. Cobertura **completa del estado documental y de GitHub**: esta ejecución completa la conciliación que los informes anteriores dejaban parcial. Los hallazgos siguientes describen trabajo ya existente; no son cambios de código realizados hoy. Se establece la primera referencia completa para las próximas comparaciones.
 
 ## Estado actual y punto para retomar
 
-Fork de GBrain, una capa de conocimiento y memoria para agentes con ingestión, búsqueda, síntesis y mantenimiento de un grafo. La rama master conserva la versión 0.42.25.0. Los pendientes heredados pertenecen al proyecto conservado en este fork; no implican un compromiso nuevo del propietario.
+Fork público de GBrain: memoria y conocimiento para agentes, con ingestión, recuperación híbrida, síntesis y grafo. La versión declarada es **0.42.25.0**. El proyecto ofrece CLI y servidor MCP, con motores PGLite y Postgres; su documentación distingue la base de datos elegida (brain), las fuentes que contiene y los permisos de llamadas locales o remotas. No hay evidencia consultada de una instalación operativa propia de neurogabo. Las cifras y experiencias de producción del README pertenecen al proyecto upstream descrito allí.
 
-**Por dónde retomar:** Partir de README.md y TODOS.md; elegir una incidencia concreta del fork y cotejar el código y el upstream antes de proponer implementación.
+**Por dónde retomar:** leer [CLAUDE.md](https://github.com/neurogabo/gbrain/blob/4a1fed4f8ad85da6c66d3fa3049c9d0210f3c1a3/CLAUDE.md) para la arquitectura y [TODOS.md](https://github.com/neurogabo/gbrain/blob/4a1fed4f8ad85da6c66d3fa3049c9d0210f3c1a3/TODOS.md) para el backlog heredado; localizar después el archivo concreto en [KEY_FILES.md](https://github.com/neurogabo/gbrain/blob/4a1fed4f8ad85da6c66d3fa3049c9d0210f3c1a3/docs/architecture/KEY_FILES.md). Para trabajo sobre costes, el punto concreto pendiente es el uso de la tabla canónica desde el rastreador de presupuesto. Para fiabilidad, revisar el seguimiento de recuperación del gateway y el ciclo de vida de conexiones. Cotejar cada tarea con su anotación de estado antes de implementarla: las casillas históricas no equivalen todas a trabajo abierto.
 
 ## Cambios integrados y trabajo en otras ramas
 
-En las referencias comparadas se identificó únicamente el commit de publicación del informe anterior. Esa comparación no sustituye la conciliación documental pendiente; se conserva el resumen anterior.
+**En master:** el último cambio sustantivo unifica los precios de modelos de chat en src/core/model-pricing.ts y deriva de allí varias tablas consumidoras. Los cambios inmediatamente anteriores enrutan la toma y renovación de locks al pool de sesiones, añaden prioridad de CPU para trabajadores y corrigen propiedad y desconexión del singleton de Postgres. Se cotejaron los diffs con el código y las notas de versión; no se ejecutaron esas funciones. Los precios son datos versionados, no tarifas actuales verificadas.
 
-**En `master`:** El corte reciente incorpora una tabla canónica de precios/modelos y soporte del modelo señalado en el commit, además de ajustes al pool de sesiones para locks y a la prioridad de trabajadores. Son datos versionados de esa fecha, no precios actuales comprobados.
+**Conciliación de evaluación:** TODOS.md conserva tres casillas P0 originales por trazabilidad, pero su sección D1 declara incorporados el comando eval gate y la conexión de la sonda nocturna. El código actual contiene el despacho a eval-gate.ts y la llamada a runNightlyQualityProbe desde autopilot. La sonda requiere su opción enabled; su existencia no acredita activación o ejecución. La captura por defecto y su endurecimiento de privacidad permanecen diferidos en el propio backlog. Esta aclaración de la revisión inicial del 2 de octubre corrige la lectura anterior de las casillas; no describe una implementación nueva.
 
-Solo se encontró una rama remota en el repositorio.
+Solo se encontró una rama remota, master; no hay trabajo en otras ramas del fork que conciliar.
 
 **Último cambio sustantivo de Git verificado:** 2026-06-04 00:00:11 America/Mexico_City (UTC−06:00); [9a0bae8d62](https://github.com/neurogabo/gbrain/commit/9a0bae8d62cdd1e0dd6655e24e082fe6c69c5dac), «v0.42.25.0 fix(pricing): unify chat-model pricing into one canonical source; add Opus 4.8 (#1819) (#1827)»; cambio sustantivo documentado en `master`. Este criterio usa fecha de commit y cambios reales de archivos, no la fecha pushed_at del repositorio.
 
 ## Pendientes y bloqueos documentados
 
-La lectura ampliada de TODOS.md identifica 281 casillas abiertas, incluyendo seguimientos históricos. Entre los P0 registrados están el gate de evaluación para CI, captura de evaluación en modo contribuidor y sonda nocturna de calidad. Su vigencia y cierre deben conciliarse con el historial; no se asignan aquí responsables ni fechas nuevos. Esta ampliación describe contenido ya existente, no nuevos commits.
+TODOS.md contiene **281 casillas sin marcar**, con duplicados y seguimientos históricos; esta cifra no representa 281 tareas vigentes distintas. Se conserva el backlog completo en su fuente y no se da por cerrado un punto solo porque haya desaparecido o porque exista un arreglo cercano.
 
-- TODOS.md contiene backlog explícito y extenso. Entre los puntos abiertos: persistencia y reconciliación del historial tool-result al reanudar el gateway (P1), propiedad del singleton bajo reconexiones concurrentes (P2) y drenado de colas antes de desconectar (P3).
-- También registra persistir best.md en SkillOpt sin mutación, dimensionar el pool directo para concurrencia, verificar firma/checksum antes de autoactualización y drenar solicitudes durante la actualización. Revisar prioridad y dependencias en la entrada original; no asumir que un arreglo cercano resuelve estos seguimientos.
+- **Evaluación:** sigue documentada como pendiente la captura por defecto con garantías de privacidad. El gate y la conexión de la sonda tienen evidencia explícita de incorporación, aunque sus casillas originales permanezcan abiertas. No son prueba de una evaluación ejecutada en este fork.
+- **Costes:** la unificación de tablas no completa el soporte del rastreador para modelos ajenos a Anthropic. El propio TODO lo marca parcialmente atendido y el código conserva consultas a ANTHROPIC_PRICING. Quedan además normalización de identificadores, manejo de mayúsculas, pruebas de rutas negativas y precios de presentación de proveedores.
+- **Fiabilidad:** se conservan el replay del historial tool-result al reanudar el gateway (P1), la propiedad del singleton con reconexiones concurrentes (P2), el refresco de pools y el drenado de colas antes de desconectar (P3). El arreglo de propiedad de conexiones no cierra esos seguimientos separados.
+- **SkillOpt y actualización:** persisten los seguimientos de best.md en modo sin mutación, tamaño del pool directo, firma/checksum antes de actualizar y drenado de solicitudes durante una actualización.
+- **Otras familias registradas:** indexación y recuperación de código, aislamiento entre fuentes y permisos, paridad de motores y cliente remoto, cobertura de evaluación, mantenimiento y observabilidad. Usar las entradas originales para alcance y prioridad; no se asignan aquí responsables ni fechas nuevos.
+
+Los pendientes heredados no implican que neurogabo haya aceptado ejecutarlos. No se encontró un bloqueo adicional de acceso al repositorio.
 
 ## PR, issues y comprobaciones
 
@@ -37,23 +42,29 @@ No se encontraron ejecuciones de GitHub Actions en la respuesta consultada. No s
 
 ## Evidencia y alcance
 
-Se enumeró de nuevo 1 rama remota y se contrastaron sus puntas con las referencias observadas en el informe parcial anterior. Se leyeron updates.md antes de la revisión, las instrucciones aplicables y 72 fuentes de texto pertinentes. Se inspeccionó el diff real de 1 commit del intervalo: 1 modifica exclusivamente updates.md. Se paginaron PR, issues y releases, y se comprobaron las ejecuciones recientes de Actions y el intervalo desde el corte anterior. Se conservaron los datos de fuentes históricas cuyo contenido permanece anclado por su SHA. No se ejecutaron pruebas, aplicaciones ni despliegues.
+Se cierra la conciliación documental inicial mediante el mapa de arquitectura, el inventario de TODOS.md, su distinción explícita entre elementos incorporados y diferidos, las notas de versión y comprobaciones estáticas en siete archivos adicionales de código/versionado. Se verificaron la única rama, los cinco commits sustantivos recientes ya conservados y sus diffs pertinentes, y el intervalo posterior, cuyos cambios son exclusivamente updates.md. Se enumeraron de nuevo PR, issues, releases y Actions al cerrar esta revisión. La primera referencia completa queda anclada a la punta indicada abajo.
 
-**Límite pendiente de cobertura:** La revisión inicial identifica estado, diffs recientes y backlog, pero no completa la conciliación de todas las referencias del amplio índice documental y del historial de cambios heredado. Se conserva como parcial y sin referencia de revisión completa previa.
+El alcance es el estado del repositorio y su documentación: no certifica que cada casilla histórica sea una incidencia reproducible, no revalida todos los resultados de evaluaciones heredadas y no supone una auditoría de seguridad línea por línea. Los hallazgos de permisos o seguridad del backlog se conservan como documentados; no se probaron contra servicios.
 
-Las afirmaciones de validación, despliegue o actividad externa conservan el alcance y la fecha de su fuente. Esta revisión no accedió a datos operativos ajenos a GitHub ni certificó servicios vivos, hardware o resultados clínicos. La desaparición de un pendiente en un documento no se considera prueba de cierre.
+Las afirmaciones externas conservan el alcance y la fecha de su fuente. Esta revisión no certificó servicios vivos, hardware ni resultados clínicos. Los commits que solo modifican updates.md se excluyen como novedades y de la fecha del último cambio sustantivo.
 
-- [README.md](https://github.com/neurogabo/gbrain/blob/9a0bae8d62cdd1e0dd6655e24e082fe6c69c5dac/README.md).
-- [TODOS.md](https://github.com/neurogabo/gbrain/blob/9a0bae8d62cdd1e0dd6655e24e082fe6c69c5dac/TODOS.md).
-- [CHANGELOG.md](https://github.com/neurogabo/gbrain/blob/9a0bae8d62cdd1e0dd6655e24e082fe6c69c5dac/CHANGELOG.md).
-- [Historial de la referencia auditada](https://github.com/neurogabo/gbrain/commits/9a0bae8d62cdd1e0dd6655e24e082fe6c69c5dac), [pull requests](https://github.com/neurogabo/gbrain/pulls?q=is%3Apr) y [issues](https://github.com/neurogabo/gbrain/issues).
+- [TODOS.md](https://github.com/neurogabo/gbrain/blob/4a1fed4f8ad85da6c66d3fa3049c9d0210f3c1a3/TODOS.md).
+- [CHANGELOG.md](https://github.com/neurogabo/gbrain/blob/4a1fed4f8ad85da6c66d3fa3049c9d0210f3c1a3/CHANGELOG.md).
+- [Arquitectura y orientación](https://github.com/neurogabo/gbrain/blob/4a1fed4f8ad85da6c66d3fa3049c9d0210f3c1a3/CLAUDE.md).
+- [Índice de archivos](https://github.com/neurogabo/gbrain/blob/4a1fed4f8ad85da6c66d3fa3049c9d0210f3c1a3/docs/architecture/KEY_FILES.md).
+- [Versión declarada](https://github.com/neurogabo/gbrain/blob/4a1fed4f8ad85da6c66d3fa3049c9d0210f3c1a3/VERSION).
+- [Despacho de eval gate](https://github.com/neurogabo/gbrain/blob/4a1fed4f8ad85da6c66d3fa3049c9d0210f3c1a3/src/commands/eval.ts).
+- [Sonda en autopilot](https://github.com/neurogabo/gbrain/blob/4a1fed4f8ad85da6c66d3fa3049c9d0210f3c1a3/src/commands/autopilot.ts).
+- [Configuración de la sonda](https://github.com/neurogabo/gbrain/blob/4a1fed4f8ad85da6c66d3fa3049c9d0210f3c1a3/src/core/config.ts).
+- [Tabla canónica](https://github.com/neurogabo/gbrain/blob/4a1fed4f8ad85da6c66d3fa3049c9d0210f3c1a3/src/core/model-pricing.ts).
+- [Rastreador de presupuesto](https://github.com/neurogabo/gbrain/blob/4a1fed4f8ad85da6c66d3fa3049c9d0210f3c1a3/src/core/budget/budget-tracker.ts).
 
 <details>
 <summary>Referencias de todas las ramas al revisar</summary>
 
 | Rama | Commit auditado |
 | --- | --- |
-| `master` (predeterminada) | [49108b8a39](https://github.com/neurogabo/gbrain/tree/49108b8a3988b400668e2b83e8e6148762be5614) |
+| `master` (predeterminada) | [4a1fed4f8a](https://github.com/neurogabo/gbrain/tree/4a1fed4f8ad85da6c66d3fa3049c9d0210f3c1a3) |
 
 El commit anterior del informe se incluye como referencia observada, pero no cambia la fecha del último cambio sustantivo. Los resúmenes de ramas conservan su distinción entre trabajo integrado y pendiente.
 
@@ -64,17 +75,19 @@ El commit anterior del informe se incluye como referencia observada, pero no cam
   "schema": "neurogabo-updates/v1",
   "owner": "neurogabo",
   "repo": "gbrain",
-  "reviewed_at": "2026-10-01T12:02:33.778Z",
+  "reviewed_at": "2026-10-02T12:12:49.580Z",
   "timezone": "America/Mexico_City",
-  "coverage": "parcial",
-  "initial": false,
-  "last_complete_review_at": null,
-  "last_complete_refs": null,
+  "coverage": "completa",
+  "initial": true,
+  "last_complete_review_at": "2026-10-02T12:12:49.580Z",
+  "last_complete_refs": {
+    "master": "4a1fed4f8ad85da6c66d3fa3049c9d0210f3c1a3"
+  },
   "observed_refs": {
-    "master": "49108b8a3988b400668e2b83e8e6148762be5614"
+    "master": "4a1fed4f8ad85da6c66d3fa3049c9d0210f3c1a3"
   },
   "default_branch": "master",
-  "audited_default_sha": "49108b8a3988b400668e2b83e8e6148762be5614",
+  "audited_default_sha": "4a1fed4f8ad85da6c66d3fa3049c9d0210f3c1a3",
   "last_substantive_commit": "9a0bae8d62cdd1e0dd6655e24e082fe6c69c5dac",
   "last_substantive_commit_at": "2026-06-04T06:00:11Z",
   "events": {
@@ -86,7 +99,9 @@ El commit anterior del informe se incluye como referencia observada, pero no cam
   "ignore_report_only_commits": true,
   "interval_from": null,
   "report_only_commits_excluded": [
-    "49108b8a3988b400668e2b83e8e6148762be5614"
-  ]
+    "4a1fed4f8ad85da6c66d3fa3049c9d0210f3c1a3"
+  ],
+  "completed_prior_partial": true,
+  "coverage_scope": "Estado documental, ramas, historial pertinente y eventos de GitHub; sin reproducir experimentos ni validar servicios externos."
 }
 -->
