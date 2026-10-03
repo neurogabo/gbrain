@@ -2,7 +2,7 @@
 
 Repositorio: [neurogabo/gbrain](https://github.com/neurogabo/gbrain). Público; fork. Rama predeterminada: `master`.
 
-**Revisión inicial del 2026-10-02 06:12:49, America/Mexico_City**. Cobertura **completa del estado documental y de GitHub**: esta ejecución completa la conciliación que los informes anteriores dejaban parcial. Los hallazgos siguientes describen trabajo ya existente; no son cambios de código realizados hoy. Se establece la primera referencia completa para las próximas comparaciones.
+**Revisión del 2026-10-03 06:02:18, America/Mexico_City: no hubo actualizaciones**. Cobertura **completa** del intervalo desde 2026-10-02 06:12:49 America/Mexico_City. Se conserva el último resumen sustantivo y sus pendientes. La publicación anterior, que solo modificó updates.md, se excluye como novedad.
 
 ## Estado actual y punto para retomar
 
@@ -11,6 +11,8 @@ Fork público de GBrain: memoria y conocimiento para agentes, con ingestión, re
 **Por dónde retomar:** leer [CLAUDE.md](https://github.com/neurogabo/gbrain/blob/4a1fed4f8ad85da6c66d3fa3049c9d0210f3c1a3/CLAUDE.md) para la arquitectura y [TODOS.md](https://github.com/neurogabo/gbrain/blob/4a1fed4f8ad85da6c66d3fa3049c9d0210f3c1a3/TODOS.md) para el backlog heredado; localizar después el archivo concreto en [KEY_FILES.md](https://github.com/neurogabo/gbrain/blob/4a1fed4f8ad85da6c66d3fa3049c9d0210f3c1a3/docs/architecture/KEY_FILES.md). Para trabajo sobre costes, el punto concreto pendiente es el uso de la tabla canónica desde el rastreador de presupuesto. Para fiabilidad, revisar el seguimiento de recuperación del gateway y el ciclo de vida de conexiones. Cotejar cada tarea con su anotación de estado antes de implementarla: las casillas históricas no equivalen todas a trabajo abierto.
 
 ## Cambios integrados y trabajo en otras ramas
+
+El contraste del intervalo no añade cambios sustantivos. El resumen siguiente describe el estado conservado de la revisión anterior.
 
 **En master:** el último cambio sustantivo unifica los precios de modelos de chat en src/core/model-pricing.ts y deriva de allí varias tablas consumidoras. Los cambios inmediatamente anteriores enrutan la toma y renovación de locks al pool de sesiones, añaden prioridad de CPU para trabajadores y corrigen propiedad y desconexión del singleton de Postgres. Se cotejaron los diffs con el código y las notas de versión; no se ejecutaron esas funciones. Los precios son datos versionados, no tarifas actuales verificadas.
 
@@ -42,7 +44,7 @@ No se encontraron ejecuciones de GitHub Actions en la respuesta consultada. No s
 
 ## Evidencia y alcance
 
-Se cierra la conciliación documental inicial mediante el mapa de arquitectura, el inventario de TODOS.md, su distinción explícita entre elementos incorporados y diferidos, las notas de versión y comprobaciones estáticas en siete archivos adicionales de código/versionado. Se verificaron la única rama, los cinco commits sustantivos recientes ya conservados y sus diffs pertinentes, y el intervalo posterior, cuyos cambios son exclusivamente updates.md. Se enumeraron de nuevo PR, issues, releases y Actions al cerrar esta revisión. La primera referencia completa queda anclada a la punta indicada abajo.
+Se enumeró de nuevo 1 rama remota y se contrastaron sus puntas con la última revisión completa. Se leyeron updates.md antes de la revisión, las instrucciones aplicables y 72 fuentes de texto pertinentes. Se inspeccionó el diff real de 1 commit del intervalo: 1 modifica exclusivamente updates.md. Se paginaron PR, issues y releases, y se comprobaron las ejecuciones recientes de Actions y el intervalo desde el corte anterior. Se conservaron los datos de fuentes históricas cuyo contenido permanece anclado por su SHA. No se ejecutaron pruebas, aplicaciones ni despliegues.
 
 El alcance es el estado del repositorio y su documentación: no certifica que cada casilla histórica sea una incidencia reproducible, no revalida todos los resultados de evaluaciones heredadas y no supone una auditoría de seguridad línea por línea. Los hallazgos de permisos o seguridad del backlog se conservan como documentados; no se probaron contra servicios.
 
@@ -64,7 +66,7 @@ Las afirmaciones externas conservan el alcance y la fecha de su fuente. Esta rev
 
 | Rama | Commit auditado |
 | --- | --- |
-| `master` (predeterminada) | [4a1fed4f8a](https://github.com/neurogabo/gbrain/tree/4a1fed4f8ad85da6c66d3fa3049c9d0210f3c1a3) |
+| `master` (predeterminada) | [0daed385a4](https://github.com/neurogabo/gbrain/tree/0daed385a466af6d72fb69208d0c67a02987ef59) |
 
 El commit anterior del informe se incluye como referencia observada, pero no cambia la fecha del último cambio sustantivo. Los resúmenes de ramas conservan su distinción entre trabajo integrado y pendiente.
 
@@ -75,19 +77,19 @@ El commit anterior del informe se incluye como referencia observada, pero no cam
   "schema": "neurogabo-updates/v1",
   "owner": "neurogabo",
   "repo": "gbrain",
-  "reviewed_at": "2026-10-02T12:12:49.580Z",
+  "reviewed_at": "2026-10-03T12:02:18.505Z",
   "timezone": "America/Mexico_City",
   "coverage": "completa",
-  "initial": true,
-  "last_complete_review_at": "2026-10-02T12:12:49.580Z",
+  "initial": false,
+  "last_complete_review_at": "2026-10-03T12:02:18.505Z",
   "last_complete_refs": {
-    "master": "4a1fed4f8ad85da6c66d3fa3049c9d0210f3c1a3"
+    "master": "0daed385a466af6d72fb69208d0c67a02987ef59"
   },
   "observed_refs": {
-    "master": "4a1fed4f8ad85da6c66d3fa3049c9d0210f3c1a3"
+    "master": "0daed385a466af6d72fb69208d0c67a02987ef59"
   },
   "default_branch": "master",
-  "audited_default_sha": "4a1fed4f8ad85da6c66d3fa3049c9d0210f3c1a3",
+  "audited_default_sha": "0daed385a466af6d72fb69208d0c67a02987ef59",
   "last_substantive_commit": "9a0bae8d62cdd1e0dd6655e24e082fe6c69c5dac",
   "last_substantive_commit_at": "2026-06-04T06:00:11Z",
   "events": {
@@ -97,9 +99,9 @@ El commit anterior del informe se incluye como referencia observada, pero no cam
     "workflow_runs": []
   },
   "ignore_report_only_commits": true,
-  "interval_from": null,
+  "interval_from": "2026-10-02T12:12:49.580Z",
   "report_only_commits_excluded": [
-    "4a1fed4f8ad85da6c66d3fa3049c9d0210f3c1a3"
+    "0daed385a466af6d72fb69208d0c67a02987ef59"
   ],
   "completed_prior_partial": true,
   "coverage_scope": "Estado documental, ramas, historial pertinente y eventos de GitHub; sin reproducir experimentos ni validar servicios externos."
