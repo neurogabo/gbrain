@@ -2,7 +2,7 @@
 
 Repositorio: [neurogabo/gbrain](https://github.com/neurogabo/gbrain). Público; fork. Rama predeterminada: `master`.
 
-**Revisión del 2026-10-06 06:03:14, America/Mexico_City: no hubo actualizaciones**. Cobertura **completa** del intervalo desde 2026-10-05 06:02:35 America/Mexico_City. Se conserva el último resumen sustantivo y sus pendientes. La publicación anterior, que solo modificó updates.md, se excluye como novedad.
+**Revisión del 2026-10-07 06:01:53, America/Mexico_City: no hubo actualizaciones**. Cobertura **completa** del intervalo desde 2026-10-06 06:03:14 America/Mexico_City. Se conserva el último resumen sustantivo y sus pendientes. La publicación anterior, que solo modificó updates.md, se excluye como novedad.
 
 ## Estado actual y punto para retomar
 
@@ -66,7 +66,7 @@ Las afirmaciones externas conservan el alcance y la fecha de su fuente. Esta rev
 
 | Rama | Commit auditado |
 | --- | --- |
-| `master` (predeterminada) | [5fd0cda22a](https://github.com/neurogabo/gbrain/tree/5fd0cda22a1ed25f2250e0acca8961d58cdde599) |
+| `master` (predeterminada) | [c01c091fce](https://github.com/neurogabo/gbrain/tree/c01c091fce67e0b5a187b2f3b226b21daadce7c9) |
 
 El commit anterior del informe se incluye como referencia observada, pero no cambia la fecha del último cambio sustantivo. Los resúmenes de ramas conservan su distinción entre trabajo integrado y pendiente.
 
@@ -77,19 +77,19 @@ El commit anterior del informe se incluye como referencia observada, pero no cam
   "schema": "neurogabo-updates/v1",
   "owner": "neurogabo",
   "repo": "gbrain",
-  "reviewed_at": "2026-10-06T12:03:14.021Z",
+  "reviewed_at": "2026-10-07T12:01:53.937Z",
   "timezone": "America/Mexico_City",
   "coverage": "completa",
   "initial": false,
-  "last_complete_review_at": "2026-10-06T12:03:14.021Z",
+  "last_complete_review_at": "2026-10-07T12:01:53.937Z",
   "last_complete_refs": {
-    "master": "5fd0cda22a1ed25f2250e0acca8961d58cdde599"
+    "master": "c01c091fce67e0b5a187b2f3b226b21daadce7c9"
   },
   "observed_refs": {
-    "master": "5fd0cda22a1ed25f2250e0acca8961d58cdde599"
+    "master": "c01c091fce67e0b5a187b2f3b226b21daadce7c9"
   },
   "default_branch": "master",
-  "audited_default_sha": "5fd0cda22a1ed25f2250e0acca8961d58cdde599",
+  "audited_default_sha": "c01c091fce67e0b5a187b2f3b226b21daadce7c9",
   "last_substantive_commit": "9a0bae8d62cdd1e0dd6655e24e082fe6c69c5dac",
   "last_substantive_commit_at": "2026-06-04T06:00:11Z",
   "events": {
@@ -99,9 +99,9 @@ El commit anterior del informe se incluye como referencia observada, pero no cam
     "workflow_runs": []
   },
   "ignore_report_only_commits": true,
-  "interval_from": "2026-10-05T12:02:35.293Z",
+  "interval_from": "2026-10-06T12:03:14.021Z",
   "report_only_commits_excluded": [
-    "5fd0cda22a1ed25f2250e0acca8961d58cdde599"
+    "c01c091fce67e0b5a187b2f3b226b21daadce7c9"
   ],
   "completed_prior_partial": true,
   "coverage_scope": "Estado documental, ramas, historial pertinente y eventos de GitHub; sin reproducir experimentos ni validar servicios externos."
