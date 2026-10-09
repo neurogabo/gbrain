@@ -2,7 +2,7 @@
 
 Repositorio: [neurogabo/gbrain](https://github.com/neurogabo/gbrain). Público; fork. Rama predeterminada: `master`.
 
-**Revisión del 2026-10-08 06:01:55, America/Mexico_City: no hubo actualizaciones**. Cobertura **completa** del intervalo desde 2026-10-07 06:01:53 America/Mexico_City. Se conserva el último resumen sustantivo y sus pendientes. La publicación anterior, que solo modificó updates.md, se excluye como novedad.
+**Revisión del 2026-10-09 06:02:49, America/Mexico_City: no hubo actualizaciones**. Cobertura **completa** del intervalo desde 2026-10-08 06:01:55 America/Mexico_City. Se conserva el último resumen sustantivo y sus pendientes. La publicación anterior, que solo modificó updates.md, se excluye como novedad.
 
 ## Estado actual y punto para retomar
 
@@ -44,7 +44,7 @@ No se encontraron ejecuciones de GitHub Actions en la respuesta consultada. No s
 
 ## Evidencia y alcance
 
-Se enumeró de nuevo 1 rama remota y se contrastaron sus puntas con la última revisión completa. Se leyeron updates.md antes de la revisión, las instrucciones aplicables y 72 fuentes de texto pertinentes. Se inspeccionó el diff real de 1 commit del intervalo: 1 modifica exclusivamente updates.md. Se paginaron PR, issues y releases, y se comprobaron las ejecuciones recientes de Actions y el intervalo desde el corte anterior. Se conservaron los datos de fuentes históricas cuyo contenido permanece anclado por su SHA. No se ejecutaron pruebas, aplicaciones ni despliegues.
+Se enumeró de nuevo 1 rama remota y se contrastaron sus puntas con la última revisión completa. Se leyeron updates.md antes de la revisión, las instrucciones aplicables y 76 fuentes de texto pertinentes. Se inspeccionó el diff real de 1 commit del intervalo: 1 modifica exclusivamente updates.md. Se paginaron PR, issues y releases, y se comprobaron las ejecuciones recientes de Actions y el intervalo desde el corte anterior. Se conservaron los datos de fuentes históricas cuyo contenido permanece anclado por su SHA. No se ejecutaron pruebas, aplicaciones ni despliegues.
 
 El alcance es el estado del repositorio y su documentación: no certifica que cada casilla histórica sea una incidencia reproducible, no revalida todos los resultados de evaluaciones heredadas y no supone una auditoría de seguridad línea por línea. Los hallazgos de permisos o seguridad del backlog se conservan como documentados; no se probaron contra servicios.
 
@@ -66,7 +66,7 @@ Las afirmaciones externas conservan el alcance y la fecha de su fuente. Esta rev
 
 | Rama | Commit auditado |
 | --- | --- |
-| `master` (predeterminada) | [303e209140](https://github.com/neurogabo/gbrain/tree/303e209140b8ce0dd9a0ce0261035c65969dabde) |
+| `master` (predeterminada) | [d1e6683429](https://github.com/neurogabo/gbrain/tree/d1e6683429cbd19e37d65687a9843b117fc0af6d) |
 
 El commit anterior del informe se incluye como referencia observada, pero no cambia la fecha del último cambio sustantivo. Los resúmenes de ramas conservan su distinción entre trabajo integrado y pendiente.
 
@@ -77,19 +77,19 @@ El commit anterior del informe se incluye como referencia observada, pero no cam
   "schema": "neurogabo-updates/v1",
   "owner": "neurogabo",
   "repo": "gbrain",
-  "reviewed_at": "2026-10-08T12:01:55.318Z",
+  "reviewed_at": "2026-10-09T12:02:49.038Z",
   "timezone": "America/Mexico_City",
   "coverage": "completa",
   "initial": false,
-  "last_complete_review_at": "2026-10-08T12:01:55.318Z",
+  "last_complete_review_at": "2026-10-09T12:02:49.038Z",
   "last_complete_refs": {
-    "master": "303e209140b8ce0dd9a0ce0261035c65969dabde"
+    "master": "d1e6683429cbd19e37d65687a9843b117fc0af6d"
   },
   "observed_refs": {
-    "master": "303e209140b8ce0dd9a0ce0261035c65969dabde"
+    "master": "d1e6683429cbd19e37d65687a9843b117fc0af6d"
   },
   "default_branch": "master",
-  "audited_default_sha": "303e209140b8ce0dd9a0ce0261035c65969dabde",
+  "audited_default_sha": "d1e6683429cbd19e37d65687a9843b117fc0af6d",
   "last_substantive_commit": "9a0bae8d62cdd1e0dd6655e24e082fe6c69c5dac",
   "last_substantive_commit_at": "2026-06-04T06:00:11Z",
   "events": {
@@ -99,9 +99,9 @@ El commit anterior del informe se incluye como referencia observada, pero no cam
     "workflow_runs": []
   },
   "ignore_report_only_commits": true,
-  "interval_from": "2026-10-07T12:01:53.937Z",
+  "interval_from": "2026-10-08T12:01:55.318Z",
   "report_only_commits_excluded": [
-    "303e209140b8ce0dd9a0ce0261035c65969dabde"
+    "d1e6683429cbd19e37d65687a9843b117fc0af6d"
   ],
   "completed_prior_partial": true,
   "coverage_scope": "Estado documental, ramas, historial pertinente y eventos de GitHub; sin reproducir experimentos ni validar servicios externos."
